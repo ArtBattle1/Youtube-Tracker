@@ -8,6 +8,8 @@ on:
 jobs:
   track-views:
     runs-on: ubuntu-latest
+    env:
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }} 
 
     steps:
       - name: Code auschecken
