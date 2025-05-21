@@ -23,6 +23,8 @@ def get_latest_video_ids():
         "maxResults": 10
     }
     res = requests.get(SEARCH_URL, params=params).json()
+    print("Verwendeter API Key:", API_KEY)
+    print("API RESPONSE:", res)
     videos = [item for item in res["items"] if item["id"]["kind"] == "youtube#video"]
     return [v["id"]["videoId"] for v in videos[:10]]
 
