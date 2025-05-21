@@ -27,7 +27,8 @@ jobs:
       - name: YouTube-Tracker ausführen
         run: |
           python Youtube-Tracker.py
-              - name: Excel-Datei als Artefakt hochladen
+          
+      - name: Excel-Datei als Artefakt hochladen
         uses: actions/upload-artifact@v3
         with:
           name: video-views
